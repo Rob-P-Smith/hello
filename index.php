@@ -1,15 +1,19 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Rob Says Hello</title>
-</head>
-<body>
-<h1>Page Heading</h1>
-</body>
-</html>
-
 <?php
+
+// Turn on error reporting
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
+// Require the autoload file
+require_once('vendor/autoload.php');
+
+// Instantiate the f3 base class
+$f3 = Base::insatnce();
+// Base f3 = new base();
+
+// Define a default route
+$f3->route('GET /', function(){
+    echo "<h1>Hello!</p>";
+});
+
+$f3->run();
