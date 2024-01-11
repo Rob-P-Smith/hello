@@ -8,7 +8,7 @@ error_reporting(E_ALL);
 require_once('vendor/autoload.php');
 
 // Instantiate the f3 base class
-$f3 = Base::insatnce();
+$f3 = Base::instance();
 
 // Define a default route
 $f3->route('GET /', function(){
